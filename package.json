@@ -1,0 +1,22 @@
+{
+  "name": "12731",
+  "version": "1.0.0",
+  "description": "Introdução ao node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heloisaatss/12731.git"
+  },
+  "author": "Heloisa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heloisaatss/12731/issues"
+  },
+  "homepage": "https://github.com/heloisaatss/12731#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
