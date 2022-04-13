@@ -1,11 +1,10 @@
-const res = require('express/lib/response')
 const http = require('http')
 const port = 3000
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200
     res.setHeader('Content-type', 'text/plain')
-    res.end('Opa, agora deu boa!')
+    res.end('Heloisa Assoni')
 })
 
 server.listen(port, () => {
