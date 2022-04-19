@@ -9,6 +9,21 @@ const app = express()
 const port = 3000
 
 var url = 'mongodb+srv://heloisa_assoni:123@cluster0.9x9v4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const options = {
+    reconnectTries: Number.MAX_VALUE,
+    reconnectInterval: 500,
+    poolSize: 5,
+    useNewUrlParser: true,
+    useFindAndModify: true
+};
+
+
+mongoose.connect(url, options)
+mongoose.set('useCreateIndex', true)
+
+mongoose.connection.on('connected', () => {
+    console.log('Conectado ao banco de dados!!')
+})
 
 app.use(express.json())
 
