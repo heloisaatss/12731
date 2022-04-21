@@ -25,24 +25,27 @@
         }
       }
     },
-    "/contatos": {
+    "/produtos": {
       "post": {
         "tags": [
-          "Contatos"
+          "Produtos"
         ],
-        "description": "Incluir um contato",
+        "description": "Incluir um produto",
         "parameters": [],
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "get": {
         "tags": [
-          "Contatos"
+          "Produtos"
         ],
-        "description": "Listar um contato",
+        "description": "Listar um produto",
         "parameters": [
           {
             "name": "nome",
@@ -57,12 +60,12 @@
         }
       }
     },
-    "/contatos/{codigo}": {
+    "/produtos/{codigo}": {
       "get": {
         "tags": [
-          "Contatos"
+          "Produtos"
         ],
-        "description": "Buscar um contato",
+        "description": "Buscar um produto",
         "parameters": [
           {
             "name": "codigo",
@@ -79,9 +82,9 @@
       },
       "put": {
         "tags": [
-          "Contatos"
+          "Produtos"
         ],
-        "description": "Alterar um contato",
+        "description": "Alterar um produto",
         "parameters": [
           {
             "name": "codigo",
@@ -98,9 +101,9 @@
       },
       "delete": {
         "tags": [
-          "Contatos"
+          "Produtos"
         ],
-        "description": "Excluir um contato",
+        "description": "Excluir um produto",
         "parameters": [
           {
             "name": "codigo",
