@@ -1,0 +1,25 @@
+{
+  "name": "12731",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heloisaatss/12731.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heloisaatss/12731/issues"
+  },
+  "homepage": "https://github.com/heloisaatss/12731#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1",
+    "swagger-autogen": "^2.21.1",
+    "swagger-ui-express": "^4.3.0"
+  }
+}
