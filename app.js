@@ -5,7 +5,9 @@ var mongoose = require('mongoose');
 var swaggerUI = require('swagger-ui-express');
 var swaggerFile = require('./swagger_output.json');
 
-var Usuarios = require('./models/usuario')
+const { route } = require('./src/routes/usuario');
+
+var routeUsuario = require('./src/routes/usuario')
 
 const app = express()
 const port = 3000
@@ -34,8 +36,11 @@ app.get('/', (req, res) => {
     res.send('Olá, aqui é o back')
 })
 
+app.use('/usuarios', routeUsuario);
+
 //Definição de uma api para CRUD de Usuários
 //C - Create
+/*
 app.post('/usuarios', (req, res) => {
     // #swagger.tags = ['Usuarios']   
     // #swagger.description = 'Incluir um usuario'
@@ -51,6 +56,9 @@ app.post('/usuarios', (req, res) => {
         }
     })
 })
+*/
+
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerFile));
 
 app.listen(port, () => {
     console.log('Servidor web ok!')
