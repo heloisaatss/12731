@@ -7,7 +7,7 @@ var swaggerFile = require('./swagger_output.json');
 
 const { route } = require('./src/routes/usuario');
 
-var routeUsuario = require('./src/routes/usuario')
+var routeUsuario = require('./src/routes/usuario');
 
 const app = express()
 const port = 3000
@@ -42,7 +42,7 @@ app.use('/usuarios', routeUsuario);
 //C - Create
 /*
 app.post('/usuarios', (req, res) => {
-    // #swagger.tags = ['Usuarios']   
+    // #swagger.tags = ['Usuarios']
     // #swagger.description = 'Incluir um usuario'
 
     Usuarios.create(req.body, (erro, data) => {
