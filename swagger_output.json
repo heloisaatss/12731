@@ -44,8 +44,24 @@
         "tags": [
           "Usuarios"
         ],
-        "description": "Incluir um usuario",
-        "parameters": [],
+        "description": "Incluir um usuário",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "senha": {
+                  "example": "any"
+                },
+                "login": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"

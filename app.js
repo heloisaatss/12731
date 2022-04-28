@@ -8,6 +8,9 @@ var swaggerFile = require('./swagger_output.json');
 const { route } = require('./src/routes/usuario');
 
 var routeUsuario = require('./src/routes/usuario');
+var routeLogin = require('./src/routes/login')
+
+var middlewares = require('./src/middlewares/middlewares');
 
 const app = express()
 const port = 3000
@@ -32,11 +35,15 @@ mongoose.connection.on('connected', () => {
 app.use(express.json())
 
 app.get('/', (req, res) => {
+    //#swagger.tags = ['Root']
+    //#swagger.description = 'End-point root da aplicação'
+
     console.log('Olá')
     res.send('Olá, aqui é o back')
 })
 
-app.use('/usuarios', routeUsuario);
+app.use('/usuarios', middlewares.autenticacao, routeUsuario);
+app.use ('/login', routeLogin)
 
 //Definição de uma api para CRUD de Usuários
 //C - Create
