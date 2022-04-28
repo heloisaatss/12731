@@ -8,7 +8,7 @@ var swaggerFile = require('./swagger_output.json');
 const { route } = require('./src/routes/usuario');
 
 var routeUsuario = require('./src/routes/usuario');
-var routeLogin = require('./src/routes/login')
+var routeProduto = require('./src/routes/produto')
 
 var middlewares = require('./src/middlewares/middlewares');
 
@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/usuarios', middlewares.autenticacao, routeUsuario);
-app.use ('/login', routeLogin)
+app.use ('/produtos', routeProduto)
 
 //Definição de uma api para CRUD de Usuários
 //C - Create
